@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body> 
+<center> 
+ <u> <h1> "Grading calculator" </h1> </u>
+
+
+
+    <form onsubmit="calculateper(); return false">
+        percentage: <input type="number" min="0" max="100" id="num1" required>
+         <br>
+        
+         <button type="submit">grade</button> 
+ 
+     </form>
+     <h2 id="result"></h2> 
+    </center>
+ </div> 
+     <script>
+         function calculateper() {
+             console.log("I am running");
+ 
+             let num1 = document.querySelector("#num1").value;
+             
+             num1 = Number(num1)
+            
+ let result = "";
+ 
+             if (num1 > 90) {
+                 result = "A1"
+ 
+ 
+             }else if(num1 > 80) {
+              result = "A"
+             
+             
+             }else if (num1 > 70) {
+              result = "B"
+             
+             }else if (num1 > 60) {
+              result = "C"
+             
+             }else if (num1 > 44) {
+              result = "E"
+             
+             }else if (num1 > 0) {
+              result = "fail"
+             }
+ 
+ 
+             console.log("result: ", result);
+             document.querySelector("#result").innerHTML = result;
+         }
+     </script>
+</body>
+</html>
